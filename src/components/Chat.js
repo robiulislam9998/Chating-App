@@ -408,16 +408,16 @@ const Chat = () => {
 
         <IoIosSend
           onClick={handleSend}
-          className="md:text-4xl text-3xl ml-[260px] md:ml-[545px] md:mt-[-60px] mt-[-40px] text-primary"
+          className="md:text-4xl text-3xl ml-[285px] md:ml-[545px] md:mt-[-60px] mt-[-40px] text-primary"
           cursor="pointer"
         />
 
         <BsFileArrowUp
           cursor="pointer"
           onClick={() => setShow(true)}
-          className="md:text-3xl text-2xl ml-[300px] md:ml-[605px] md:mt-[-40px] mt-[-30px] text-primary"
+          className="md:text-3xl text-2xl ml-[310px] md:ml-[605px] md:mt-[-40px] mt-[-30px] text-primary"
         />
-        <div className="md:text-3xl text-2xl ml-[335px] md:ml-[580px] mt-[-25px] w-[10%]">
+        <div className="md:text-3xl text-2xl ml-[340px] md:ml-[580px] mt-[-25px] w-[10%]">
           <AudioRecorder
             onRecordingComplete={(blob) => addAudioElement(blob)}
             recorderControls={recorderControls}
