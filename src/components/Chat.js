@@ -126,6 +126,9 @@ const Chat = () => {
         setIconshow(false);
       });
     }
+    if (emojishow) {
+      setEmojishow(false);
+    }
   };
 
   useEffect(() => {
@@ -391,7 +394,7 @@ const Chat = () => {
        <MdOutlineFlipCameraIos className="text-3xl ml-[250px] mt-[-30px]" />
         <TfiGallery className="text-3xl ml-[200px] mt-[-30px]" />
         <GoFileMedia className="text-3xl ml-[150px] mt-[-30px]" /> */}
-        <div className="absolute top-[200px] right-0">
+        <div className="absolute top-[150px] right-0">
           {emojishow && (
             <EmojiPicker onEmojiClick={(a) => setMsg(msg + a.emoji)} />
           )}
@@ -399,27 +402,22 @@ const Chat = () => {
         <button>
           <BsEmojiSmile
             onClick={() => setEmojishow(!emojishow)}
-            className="text-[#F5C33A] text-2xl md:text-4xl md:ml-[500px] mt-[32px] md:mt-[-55px]"
+            className="text-[#F5C33A] text-2xl ml-1 md:text-4xl md:ml-[500px] mt-[32px] md:mt-[-55px]"
           />
         </button>
-        {iconshow ? (
-          <IoIosSend
-            onClick={handleSend}
-            className="md:text-4xl text-3xl ml-[243px] md:ml-[545px] md:mt-[-60px] mt-[-40px] text-primary"
-            cursor="pointer"
-          />
-        ) : (
-          <GiLoveHowl
-            className="md:text-4xl text-3xl ml-[243px] md:ml-[545px]  md:mt-[-60px] mt-[-40px] text-[#FFA500]"
-            cursor="pointer"
-          />
-        )}
+
+        <IoIosSend
+          onClick={handleSend}
+          className="md:text-4xl text-3xl ml-[260px] md:ml-[545px] md:mt-[-60px] mt-[-40px] text-primary"
+          cursor="pointer"
+        />
+
         <BsFileArrowUp
           cursor="pointer"
           onClick={() => setShow(true)}
-          className="md:text-3xl text-2xl ml-[320px] md:ml-[605px] md:mt-[-40px] mt-[-30px] text-primary"
+          className="md:text-3xl text-2xl ml-[300px] md:ml-[605px] md:mt-[-40px] mt-[-30px] text-primary"
         />
-        <div className="md:text-3xl text-2xl ml-[277px] md:ml-[580px] mt-[-25px] w-[10%]">
+        <div className="md:text-3xl text-2xl ml-[335px] md:ml-[580px] mt-[-25px] w-[10%]">
           <AudioRecorder
             onRecordingComplete={(blob) => addAudioElement(blob)}
             recorderControls={recorderControls}
